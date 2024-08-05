@@ -1,0 +1,5 @@
+/venv/
+db.sqlite3
+output.xlsx
+test_openpyxl.py
+/.git/
