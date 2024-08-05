@@ -13,6 +13,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-EXPOSE 4000
+EXPOSE 8080
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:4000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8080"]
