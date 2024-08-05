@@ -8,5 +8,3 @@ services:
       - .:/app
     ports:
       - "4000:8000"
-
-      
