@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create AED Payment</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'payments/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="{% static 'payments/LOGO PNG.png' %}" alt="Logo" class="logo">
+        </div>
+        <div class="form-header">
+            <h1>AED Payment Gateway</h1>
+        </div>
+        <form id="payment-form" method="post" action="{% url 'process_telr_payment' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" id="telr-button" class="btn">Pay</button>
+        </form>
+    </div>
+</body>
+</html>

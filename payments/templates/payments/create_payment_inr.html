@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create INR Payment</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'payments/styles.css' %}">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="{% static 'payments/LOGO PNG.png' %}" alt="Logo" class="logo">
+        </div>
+        <h1>INR Payment Gateway</h1>
+        <form id="payment-form" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="order_id" value="{{ order_id }}">
+            <button type="button" id="rzp-button" class="btn">Pay</button>
+        </form>
+    </div>
+
+    <script>
+        var options = {
+            "key": "{{ key_id }}", // Enter the Key ID generated from the Dashboard
+            "amount": "{{ amount }}", // Amount is in paise
+            "currency": "INR",
+            "name": "Service Payment",
+            "description": "Payment for your selected service",
+            "order_id": "{{ order_id }}", // This is a Razorpay Order ID
+            "handler": function (response){
+                document.getElementById('payment-form').submit();
+            },
+            "prefill": {
+                "name": "{{ name }}",
+                "email": "{{ email }}",
+                "contact": "{{ contact_india }}"  // Update to include the correct contact number
+            },
+            "theme": {
+                "color": "#F37254"
+            }
+        };
+
+        var rzp1 = new Razorpay(options);
+        document.getElementById('rzp-button').onclick = function(e){
+            rzp1.open();
+            e.preventDefault();
+        }
+    </script>
+</body>
+</html>
