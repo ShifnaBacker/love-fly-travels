@@ -1,14 +1,9 @@
+{% extends 'payments/base.html' %}
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'payments/styles.css' %}">
-</head>
-<body>
-    <div class="container">
+{% load static %}
+{% block content %}
+   
         <div class="logo-container">
             <img src="{% static 'payments/LOGO PNG.png' %}" alt="Logo" class="logo">
         </div>
@@ -64,16 +59,23 @@
                 <h2>Contact Us</h2>
                 <p>If you have questions or comments about this policy, you may contact our Data Protection Officer (DPO) at:</p>
                 <p>Love Fly Travels<br>
-                [Address]<br>
-                [City, State, ZIP Code]<br>
+                    ANAPPARA PATHANAMTHITTA<br>
                 <a href="mailto:loveflytravelspta@gmail.com">loveflytravelspta@gmail.com</a><br>
-                [Phone Number]</p>
+                <a href="tel:+ 971 567320711">Phone: + 971 567320711</a><br><br><a href="tel:+971 55 598 1041">Phone: +971 55 598 1041</a><br></p>
+                <br><br>Love Fly Travels<br>
+                BIN HADDAH BUILDING <br>
+                ROLLA GRNDMALL  <br>
+                SHARJAH UAE<br>
+            <a href="mailto:loveflytravelspta@gmail.com">loveflytravelspta@gmail.com</a><br>
+            <br><a href="tel:+ 971 567320711">Phone: + 971 567320711</a><br><br><a href="tel:+971 55 598 1041">Phone: +971 55 598 1041</a><br> </p>
+        
             </section>
             <section>
                 <h2>Updates to This Policy</h2>
                 <p>We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal, or regulatory reasons. We will notify you of any changes by posting the new policy on our website. You are advised to review this policy periodically for any changes.</p>
             </section>
         </div>
-    </div>
-</body>
-</html>
+   
+    </html>
+    {% endblock %}
+    

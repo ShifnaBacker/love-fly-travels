@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Payment Successful</title>
-    {% load static %}
+{% extends 'payments/base.html' %}
 
-    <link rel="stylesheet" type="text/css" href="{% static 'payments/styles.css' %}">
-</head>
-<body>
-    <div class="container">
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
         <h1>Payment Successful</h1>
         <p>Thank you, {{ payment.customer_name }}! Your payment of {{ payment.amount }} {{ payment.currency }} was successful.</p>
-    </div>
-</body>
-</html>
+    
+    </html>
+    {% endblock %}
+    

@@ -1,11 +1,11 @@
 body {
     background-color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
    
-    margin: 0;
-    font-family: Arial, sans-serif;
 }
 
 .container {
@@ -15,7 +15,6 @@ body {
     padding: 40px;
     width: 100%;
     max-width: 400px;
-    min-height: 70vh;
     color: black;
     display: flex;
     flex-direction: column;
@@ -23,36 +22,47 @@ body {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    margin-top: 60px; /* Adjusted to bring the container down */
+    margin: 60px auto; /* Center the container horizontally */
 }
 
 .logo-container {
-    position: absolute;
-    top: -40px; /* Adjusted to move the logo up or down */
+    position: relative; /* Keep it relative for positioning */
+    top: -20px; /* Adjust this value if needed */
     background-color: #0052cc;
-    border-radius: 50%;
-    padding: 15px;
+    border-radius: 50%; /* Makes it round */
+    padding: 10px; /* Adjust the padding for size */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center it */
+    width: 80px; /* Set a width for the container */
+    height: 80px; /* Set a height for the container */
+    display: flex; /* Center logo inside */
+    align-items: center; /* Center logo vertically */
+    justify-content: center; /* Center logo horizontally */
 }
+
 
 .logo {
     width: 80px;
 }
 
-
 .form-header {
-    text-align: center;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
     margin-bottom: 20px;
-    margin-top: 60px; /* Adjusted to account for the larger logo */
+    width: 100%; /* Ensure full width of the parent */
 }
 
 .form-header h1 {
     margin: 0;
 }
 
+
 form {
-    background-color: w;
-    padding: 20px;
+    background-color: white;
+    
     border-radius: 10px;
     color: #333;
     display: flex;
@@ -63,34 +73,30 @@ form {
 }
 
 .form-group {
-    /*display: flex;
+    display: flex;
     flex-direction: column;
-    width: 100%;*/
+    width: 100%;
     position: relative;
 }
 
-
-
- input,textarea,select {
+input, textarea, select {
     padding: 10px;
     border: 1px solid #ccc;
-    /*border-radius: 5px;*/
     width: 100%;
-    /*border: 1px solid #fff;*/
-    background:white;
+    background: white;
     font-size: 15px;
     outline: 0;
 }
+
 .form-group label {
     height: 100%;
-    position:absolute;
+    position: absolute;
     left: 0;
     top: 0;
     padding: 10px;
-    color:white;
-    cursor:text;
- 
- }
+    color: white;
+    cursor: text;
+}
 
 .btn {
     width: 100%;
@@ -105,4 +111,39 @@ form {
 
 .btn:hover {
     background-color: #0052cc;
+}
+
+.footer-links {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e7e7e7;
+    width: 100%;
+    flex-wrap: wrap; /* Allow links to wrap */
+    justify-content: center; /* Center the links */
+    margin-top: 20px; /* Add some margin on top */
+}
+
+.footer-links a {
+    color: #0052cc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 600px) {
+    .footer-links {
+        flex-direction: column; /* Stack links vertically */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .footer-links a {
+        margin: 5px 0; /* Adjust margin for vertical stacking */
+        font-size: 14px; /* Optionally reduce font size */
+    }
 }
