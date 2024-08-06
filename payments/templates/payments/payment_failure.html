@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Payment Failed</title>
-    {% load static %}
+{% extends 'payments/base.html' %}
 
-    <link rel="stylesheet" type="text/css" href="{% static 'payments/styles.css' %}">
-</head>
-<body>
-    <div class="container">
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+    
         <h1>Payment Failed</h1>
         <p>Sorry, there was an issue processing your payment. Please try again.</p>
-    </div>
-</body>
-</html>
+    
+    </html>
+    {% endblock %}
+    
