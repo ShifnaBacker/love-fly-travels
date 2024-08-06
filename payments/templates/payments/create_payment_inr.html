@@ -1,24 +1,22 @@
+{% extends 'payments/base.html' %}
+
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Create INR Payment</title>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'payments/styles.css' %}">
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-</head>
-<body>
-    <div class="container">
+{% load static %}
+{% block content %}
+    
         <div class="logo-container">
             <img src="{% static 'payments/LOGO PNG.png' %}" alt="Logo" class="logo">
         </div>
+        <div class="form-header">
         <h1>INR Payment Gateway</h1>
+    </div>
         <form id="payment-form" method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="hidden" name="order_id" value="{{ order_id }}">
             <button type="button" id="rzp-button" class="btn">Pay</button>
         </form>
-    </div>
+    
 
     <script>
         var options = {
@@ -47,5 +45,6 @@
             e.preventDefault();
         }
     </script>
-</body>
 </html>
+{% endblock %}
+

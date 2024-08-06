@@ -1,27 +1,29 @@
+{% extends 'payments/base.html' %}
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'payments/styles.css' %}">
-</head>
-<body>
-    <div class="container">
+{% load static %}
+{% block content %}
+   
         <div class="logo-container">
             <img src="{% static 'payments/LOGO PNG.png' %}" alt="Logo" class="logo">
         </div>
         <div class="form-header">
         <h1>Contact Us</h1>
-    </div>
+    
         <p>If you have any questions or need assistance, feel free to reach out to us:</p>
         <h2>Email Us</h2>
         <p>Email: <a href="mailto:loveflytravelspta@gmail.com">loveflytravelspta@gmail.com</a></p>
         <h2>Call Us</h2>
-        <p>Phone: [Your Phone Number]</p>
+        <p>INDIA <br><a href="tel:+918921485169">Phone: +91 8921485169</a><br><a href="tel:+91 8590945121">Phone: +91 8590945121</a><br><a href="tel:+91 9446817277">Phone: +91 9446817277</a><br><br>UAE
+            <br><a href="tel:+ 971 567320711">Phone: + 971 567320711</a><br><br><a href="tel:+971 55 598 1041">Phone: +971 55 598 1041</a><br> </p>
         <h2>Office Address</h2>
-        <p>[Your Office Address]</p>
-    </div>
-</body>
-</html>
+        <p>INDIA <br><br>LOVE FLY TRAVELS <br> 
+            ANAPPARA PATHANAMTHITTA <br><br><br>UAE <br><br>LOVE FLY TRAVELS SHARJAH <br>
+            BIN HADDAH BUILDING <br>
+            ROLLA GRNDMALL  <br>
+            SHARJAH UAE
+            </p>
+   
+    </html>
+    {% endblock %}
+    

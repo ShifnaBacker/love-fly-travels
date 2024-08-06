@@ -1,14 +1,11 @@
+{% extends 'payments/base.html' %}
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cancellation Policy</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'payments/styles.css' %}">
-</head>
-<body>
-    <div class="container">
+{% load static %}
+{% block content %}
+
+
+   
         <div class="logo-container">
             <img src="{% static 'payments/LOGO PNG.png' %}" alt="Logo" class="logo">
         </div>
@@ -21,6 +18,8 @@
         <p>We allow cancellations within [X days] of the booking date for a full refund. After that period, a cancellation fee may apply.</p>
         <h2>Refund Policy</h2>
         <p>Refunds will be processed to the original payment method within [Y days] after the cancellation request is approved.</p>
-    </div>
-</body>
+    
+   
+
 </html>
+{% endblock %}

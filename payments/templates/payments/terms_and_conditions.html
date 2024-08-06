@@ -1,14 +1,9 @@
+{% extends 'payments/base.html' %}
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Conditions</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'payments/styles.css' %}">
-</head>
-<body>
-    <div class="container">
+{% load static %}
+{% block content %}
+   
         <div class="logo-container">
             <img src="{% static 'payments/LOGO PNG.png' %}" alt="Logo" class="logo">
         </div>
@@ -52,12 +47,19 @@
                 <h2>Contact Us</h2>
                 <p>If you have any questions about these Terms and Conditions, please contact us at:</p>
                 <p>Love Fly Travels<br>
-                [Address]<br>
-                [City, State, ZIP Code]<br>
+                    ANAPPARA PATHANAMTHITTA<br>
                 <a href="mailto:loveflytravelspta@gmail.com">loveflytravelspta@gmail.com</a><br>
-                [Phone Number]</p>
+                <a href="tel:+ 971 567320711">Phone: + 971 567320711</a><br><br><a href="tel:+971 55 598 1041">Phone: +971 55 598 1041</a><br></p>
+                <br><br>Love Fly Travels<br>
+                BIN HADDAH BUILDING <br>
+                ROLLA GRNDMALL  <br>
+                SHARJAH UAE<br>
+            <a href="mailto:loveflytravelspta@gmail.com">loveflytravelspta@gmail.com</a><br>
+            <br><a href="tel:+ 971 567320711">Phone: + 971 567320711</a><br><br><a href="tel:+971 55 598 1041">Phone: +971 55 598 1041</a><br> </p>
+        
             </section>
         </div>
-    </div>
-</body>
-</html>
+   
+    </html>
+    {% endblock %}
+    
