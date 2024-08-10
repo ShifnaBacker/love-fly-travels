@@ -84,6 +84,13 @@ form {
     width: 100%;
     align-items: center;
 }
+h2,p{
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+    padding-bottom: 25px;
+}
 
 .form-group {
     display: flex;
