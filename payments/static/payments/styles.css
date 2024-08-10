@@ -1,10 +1,12 @@
 body {
     background-color: white;
-    margin: 0;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure full viewport height */
+    min-height: 100vh;
+    background-color: #e7e7e7;
 }
 
 .container {
@@ -19,18 +21,22 @@ body {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    margin: 60px auto;
-    box-sizing: border-box;
+    margin: 60px auto; /* Centered */
+    padding: 0; /* Remove padding */
 }
 
 .header {
     background: linear-gradient(to bottom, #4e9eff, #0044cc);
     height: 30vh;
-    padding-top: 30px;
-    width: 100%; /* Make header width responsive */
+    width: 100%; /* Full width */
     box-sizing: border-box;
     border-radius: 20px 20px 0 0;
-    margin: 0; /* Remove left margin */
+    margin: 0; /* Remove all margins */
+    padding-top: 30px; /* Optional: Keep top padding */
+}
+
+.header h1, .header h2 {
+    margin: 0; /* Remove default margins */
 }
 
 .logo-container {
@@ -47,6 +53,9 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+/* Rest of your CSS... */
+
 
 .logo {
     width: 80px;
@@ -95,6 +104,20 @@ a {
     padding-bottom: 25px;
 }
 
+input, textarea, select {
+    padding: 12px 15px ; /* Consistent padding */
+    border: 1px solid #ddd; /* Consistent border */
+    width: 100%; /* Make inputs responsive */
+    max-width: 100%; /* Ensure maximum width */
+    background-color: aliceblue; /* Same background color */
+    font-size: 15px; /* Same font size */
+    outline: 0; /* Remove outline */
+    border-radius: 20px; /* Same border radius */
+    box-sizing: border-box; /* Box model adjustments */
+    margin:10px  0 ; /* Consistent vertical margin */
+}
+
+/* Optional: For better spacing between the input fields */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -102,21 +125,9 @@ a {
     position: relative;
 }
 
-input, textarea, select {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    width: 100%; /* Make inputs responsive */
-    max-width: 380px; /* Ensure maximum width */
-    background-color: aliceblue;
-    font-size: 15px;
-    outline: 0;
-    border-radius: 20px;
-    box-sizing: border-box;
-    margin: 10px 0; /* Add vertical margin for better spacing */
-}
 
 label {
-    margin: 15px;
+    margin: 15px ;
     font-weight: bold;
 }
 
@@ -179,10 +190,7 @@ input::placeholder, textarea::placeholder {
         margin: 10px auto;
     }
 
-    /* .header {
-        height: 25vh; /* Adjust height for smaller screens */
-    } */
-
+    
     .footer-links {
         flex-direction: column; /* Stack links vertically */
         padding: 10px; /* Reduced padding for smaller screens */
@@ -200,5 +208,7 @@ input::placeholder, textarea::placeholder {
     input, textarea, select {
         width: 100%; /* Make form inputs responsive */
         max-width: 100%; /* Ensure inputs take full width */
+        margin: 5px;
     }
 
+}

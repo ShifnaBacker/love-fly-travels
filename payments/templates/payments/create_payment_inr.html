@@ -13,12 +13,33 @@
         </div>
     </div>
     
-        <form id="payment-form" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="hidden" name="order_id" value="{{ order_id }}">
-            <button type="button" id="rzp-button" class="btn">Pay</button>
-        </form>
+    <form id="payment-form" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.customer_name.label_tag }} {{ form.customer_name }}
+        </div>
+        <div class="form-group">
+            {{ form.customer_email.label_tag }} {{ form.customer_email }}
+        </div>
+        <div class="form-group">
+            {{ form.customer_contact_india.label_tag }} {{ form.customer_contact_india }}
+        </div>
+        <div class="form-group">
+            {{ form.customer_contact_other.label_tag }} {{ form.customer_contact_other }}
+        </div>
+        <div class="form-group">
+            {{ form.feedback.label_tag }} {{ form.feedback }}
+        </div>
+        <div class="form-group">
+            {{ form.service.label_tag }} {{ form.service }}
+        </div>
+        <div class="form-group">
+            {{ form.custom_amount.label_tag }} {{ form.custom_amount }}
+        </div>
+        <input type="hidden" name="order_id" value="{{ order_id }}">
+        <button type="button" id="rzp-button" class="btn">Pay</button>
+    </form>
+    
    
 
     <script>
