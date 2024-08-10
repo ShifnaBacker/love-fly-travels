@@ -4,6 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
 }
 
 .container {
@@ -25,11 +26,11 @@ body {
 .header {
     background: linear-gradient(to bottom, #4e9eff, #0044cc);
     height: 30vh;
-    margin: 0;
     padding-top: 30px;
-    width: 100%;
+    width: 100%; /* Make header width responsive */
     box-sizing: border-box;
     border-radius: 20px 20px 0 0;
+    margin: 0; /* Remove left margin */
 }
 
 .logo-container {
@@ -84,10 +85,12 @@ form {
     width: 100%;
     align-items: center;
 }
-h2,p{
+
+h2, p {
     margin: 10px;
 }
-a{
+
+a {
     text-decoration: none;
     padding-bottom: 25px;
 }
@@ -102,24 +105,26 @@ a{
 input, textarea, select {
     padding: 12px 15px;
     border: 1px solid #ddd;
-    width: 380px;
-    background-color:aliceblue;
+    width: 100%; /* Make inputs responsive */
+    max-width: 380px; /* Ensure maximum width */
+    background-color: aliceblue;
     font-size: 15px;
     outline: 0;
     border-radius: 20px;
     box-sizing: border-box;
-    margin: 10px;
+    margin: 10px 0; /* Add vertical margin for better spacing */
 }
 
-
-label{
+label {
     margin: 15px;
     font-weight: bold;
 }
+
 textarea {
     resize: vertical;
     height: 100px;
 }
+
 
 input::placeholder, textarea::placeholder {
     color: #aaa;
@@ -127,7 +132,8 @@ input::placeholder, textarea::placeholder {
 }
 
 .btn {
-    width: 380px;
+    width: 100%; /* Make button responsive */
+    max-width: 380px; /* Ensure maximum width */
     padding: 10px;
     border: none;
     background-color: #0066ff;
@@ -135,34 +141,31 @@ input::placeholder, textarea::placeholder {
     font-size: 16px;
     border-radius: 25px;
     cursor: pointer;
-    margin: 10px;
+    margin: 10px 0; /* Add vertical margin */
 }
 
 .btn:hover {
     background-color: #0052cc;
 }
+
 .footer-links {
     background: linear-gradient(to bottom, #4e9eff, #0044cc);
     padding: 20px;
     text-align: center;
     border-top: 1px solid #e7e7e7;
-    width: 400px; /* Ensures it takes the full width of the container */
-    max-width: 400px; /* Matches the max width of the container */
-    margin: 0 auto; /* Remove top margin */
+    width: 100%; /* Make footer width responsive */
+     /* Matches the max width of the container */
+    margin: 0 auto;
     box-sizing: border-box;
     border-radius: 0 0 20px 20px;
-    height: 20vh;
-   
+    height: auto; /* Allow footer height to adjust based on content */
 }
 
-
-
 .footer-links a {
-    color: white; /* Match header font color */
+    color: white;
     text-decoration: none;
     margin: 10px;
     font-size: 16px;
-   
 }
 
 .footer-links a:hover {
@@ -171,13 +174,31 @@ input::placeholder, textarea::placeholder {
 
 /* Media query for mobile responsiveness */
 @media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    /* .header {
+        height: 25vh; /* Adjust height for smaller screens */
+    } */
+
     .footer-links {
-        flex-direction: column;
-        padding: 10px;
+        flex-direction: column; /* Stack links vertically */
+        padding: 10px; /* Reduced padding for smaller screens */
     }
 
     .footer-links a {
-        margin: 5px 0;
-        font-size: 14px;
+        margin: 5px 0; /* Adjust margin between links */
+        font-size: 14px; /* Smaller font size */
     }
-}
+
+    h2, p {
+        margin: 5px; /* Reduce margins on smaller screens */
+    }
+
+    input, textarea, select {
+        width: 100%; /* Make form inputs responsive */
+        max-width: 100%; /* Ensure inputs take full width */
+    }
+
