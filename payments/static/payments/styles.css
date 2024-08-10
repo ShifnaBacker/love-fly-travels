@@ -1,75 +1,95 @@
 body {
     background-color: white;
     margin: 0;
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-   
 }
 
 .container {
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 40px;
     width: 100%;
     max-width: 400px;
     color: black;
     display: flex;
     flex-direction: column;
-    border: solid 1px black;
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    margin: 60px auto; /* Center the container horizontally */
+    margin: 60px auto;
+    box-sizing: border-box;
+}
+
+.header {
+    background: linear-gradient(to bottom, #4e9eff, #0044cc);
+    height: 30vh;
+    margin: 0;
+    padding-top: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px 20px 0 0;
 }
 
 .logo-container {
-    position: relative; /* Keep it relative for positioning */
-    top: -20px; /* Adjust this value if needed */
-    background-color: #0052cc;
-    border-radius: 50%; /* Makes it round */
-    padding: 10px; /* Adjust the padding for size */
+    position: relative;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center it */
-    width: 80px; /* Set a width for the container */
-    height: 80px; /* Set a height for the container */
-    display: flex; /* Center logo inside */
-    align-items: center; /* Center logo vertically */
-    justify-content: center; /* Center logo horizontally */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
 
 .logo {
     width: 80px;
 }
 
 .form-header {
-    display: flex; /* Use flexbox for centering */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin-bottom: 20px;
-    width: 100%; /* Ensure full width of the parent */
+    width: 100%;
+    padding-top: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-header h1 {
     margin: 0;
+    font-size: 25px;
 }
 
+.form-header h2 {
+    margin: 0;
+    font-size: 15px;
+    padding-top: 5px;
+}
 
 form {
     background-color: white;
-    
+    padding-top: 10px;
     border-radius: 10px;
     color: #333;
     display: flex;
     flex-direction: column;
-    gap: 15px;
     width: 100%;
     align-items: center;
+}
+h2,p{
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+    padding-bottom: 25px;
 }
 
 .form-group {
@@ -80,55 +100,69 @@ form {
 }
 
 input, textarea, select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    width: 100%;
-    background: white;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    width: 380px;
+    background-color:aliceblue;
     font-size: 15px;
     outline: 0;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 10px;
 }
 
-.form-group label {
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 10px;
-    color: white;
-    cursor: text;
+
+label{
+    margin: 15px;
+    font-weight: bold;
+}
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
 }
 
 .btn {
-    width: 100%;
+    width: 380px;
     padding: 10px;
     border: none;
     background-color: #0066ff;
     color: white;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
+    margin: 10px;
 }
 
 .btn:hover {
     background-color: #0052cc;
 }
-
 .footer-links {
-    background-color: #f8f8f8;
+    background: linear-gradient(to bottom, #4e9eff, #0044cc);
     padding: 20px;
     text-align: center;
     border-top: 1px solid #e7e7e7;
-    width: 100%;
-    flex-wrap: wrap; /* Allow links to wrap */
-    justify-content: center; /* Center the links */
-    margin-top: 20px; /* Add some margin on top */
+    width: 400px; /* Ensures it takes the full width of the container */
+    max-width: 400px; /* Matches the max width of the container */
+    margin: 0 auto; /* Remove top margin */
+    box-sizing: border-box;
+    border-radius: 0 0 20px 20px;
+    height: 20vh;
+   
 }
 
+
+
 .footer-links a {
-    color: #0052cc;
+    color: white; /* Match header font color */
     text-decoration: none;
-    margin: 0 15px;
+    margin: 10px;
     font-size: 16px;
+   
 }
 
 .footer-links a:hover {
@@ -138,12 +172,12 @@ input, textarea, select {
 /* Media query for mobile responsiveness */
 @media (max-width: 600px) {
     .footer-links {
-        flex-direction: column; /* Stack links vertically */
-        padding: 10px; /* Reduce padding */
+        flex-direction: column;
+        padding: 10px;
     }
 
     .footer-links a {
-        margin: 5px 0; /* Adjust margin for vertical stacking */
-        font-size: 14px; /* Optionally reduce font size */
+        margin: 5px 0;
+        font-size: 14px;
     }
 }

@@ -3,20 +3,23 @@
 <!DOCTYPE html>
 {% load static %}
 {% block content %}
-    
+    <div class="header">
         <div class="logo-container">
             <img src="{% static 'payments/LOGO PNG.png' %}" alt="Logo" class="logo">
         </div>
         <div class="form-header">
-        <h1>INR Payment Gateway</h1>
+           <h1>loveflytravels.in</h1> 
+        <h2>Payment Portal</h2>
+        </div>
     </div>
+    
         <form id="payment-form" method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="hidden" name="order_id" value="{{ order_id }}">
             <button type="button" id="rzp-button" class="btn">Pay</button>
         </form>
-    
+   
 
     <script>
         var options = {
