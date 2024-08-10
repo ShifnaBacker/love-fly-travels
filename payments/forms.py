@@ -9,7 +9,7 @@ class PaymentForm(forms.Form):
     )
     customer_email = forms.EmailField(
         label='Email', 
-        widget=forms.EmailInput(attrs={'placeholder': 'Enter your email'})
+        widget=forms.EmailInput(attrs={'placeholder': 'Enter your email' })
     )
     customer_contact_india = forms.CharField(
         label='Mobile Number', 
