@@ -87,8 +87,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-RAZORPAY_KEY_ID = 'your_razorpay_key_id'
-RAZORPAY_KEY_SECRET = 'your_razorpay_key_secret'
+RAZORPAY_KEY_ID = 'rzp_test_Uesjc1sbh2ZJv2'
+RAZORPAY_KEY_SECRET = 'OfX8ncMydlxoHc'
 RAZORPAY_WEBHOOK_SECRET = 'your_razorpay_webhook_secret'
 
 TELR_STORE_ID = 'your_telr_store_id'
