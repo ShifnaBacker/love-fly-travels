@@ -5,9 +5,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-&d=^o-334dwai@s42rodfh0s^$i0jl=cntu-iem%^ojs^(kjpz'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["103.235.106.106", "127.0.0.1", "localhost", "love-fly-travels.onrender.com"]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://love-fly-travels.onrender.com',
+    # Add other domains if needed
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
