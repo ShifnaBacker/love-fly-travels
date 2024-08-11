@@ -36,7 +36,7 @@ def create_payment_inr(request):
             service = form.cleaned_data['service']
             amount = form.cleaned_data['custom_amount']
 
-            order_amount = int(amount * 100)  # Razorpay expects the amount in paise
+            order_amount = int(amount) * 100  # Razorpay expects the amount in paise
             currency = 'INR'
             order = razorpay_client.order.create({
                 'amount': order_amount,
