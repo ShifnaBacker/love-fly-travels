@@ -108,7 +108,7 @@ input, textarea, select {
     padding: 12px 15px ; /* Consistent padding */
     border: 1px solid #ddd; /* Consistent border */
     width: 100%; /* Make inputs responsive */
-    max-width: 100%; /* Ensure maximum width */
+    max-width: 360px; /* Ensure maximum width */
     background-color: aliceblue; /* Same background color */
     font-size: 15px; /* Same font size */
     outline: 0; /* Remove outline */
@@ -207,7 +207,7 @@ input::placeholder, textarea::placeholder {
 
     input, textarea, select {
         width: 100%; /* Make form inputs responsive */
-        max-width: 100%; /* Ensure inputs take full width */
+        max-width: 98%; /* Ensure inputs take full width */
         margin: 5px;
     }
 
