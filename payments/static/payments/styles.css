@@ -28,7 +28,7 @@ body {
 .header {
     background: linear-gradient(to bottom, #4e9eff, #0044cc);
     height: 30vh;
-    width: 400px; /* Full width */
+    width: 100%; /* Full width */
     max-width: 400px;
     box-sizing: border-box;
     border-radius: 20px 20px 0 0;
