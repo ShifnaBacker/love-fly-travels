@@ -26,8 +26,7 @@ body {
 }
 
 .header {
-    /* background: linear-gradient(to bottom, #4e9eff, #0044cc); */
-    background-color: red;
+    background: linear-gradient(to bottom, #4e9eff, #0044cc);
     height: 30vh;
     width: 100%; /* Full width */
     box-sizing: border-box;
