@@ -38,11 +38,11 @@ def create_payment_inr(request):
 
             order_amount = int(amount) * 100  # Razorpay expects the amount in paise
             currency = 'INR'
-            order = razorpay_client.order.create({
-                'amount': order_amount,
-                'currency': currency,
-                'payment_capture': '1'
-            })
+            order = razorpay_client.order.create(dict(
+                amount= order_amount,
+                currency= currency,
+                payment_capture= '1'
+            ))
 
             payment = Payment.objects.create(
                 service=service,
