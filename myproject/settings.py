@@ -94,7 +94,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 RAZORPAY_KEY_ID = 'rzp_test_Uesjc1sbh2ZJv2'
 RAZORPAY_KEY_SECRET = 'OfX8ncMydlxoHc'
-RAZORPAY_WEBHOOK_SECRET = 'your_razorpay_webhook_secret'
+RAZORPAY_WEBHOOK_SECRET = 'Afzal051@'
 
 TELR_STORE_ID = 'your_telr_store_id'
 TELR_AUTH_KEY = 'your_telr_auth_key'
