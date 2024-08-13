@@ -13,7 +13,7 @@
         </div>
     </div>
     
-    <form id="payment-form" method="post">
+    <form id="payment-form" method="POST">
         {% csrf_token %}
         <div class="form-group">
             {{ form.customer_name.label_tag }} {{ form.customer_name }}
@@ -37,22 +37,19 @@
             {{ form.custom_amount.label_tag }} {{ form.custom_amount }}
         </div>
         <input type="hidden" name="order_id" value="{{ order_id }}">
-        <button type="button" id="rzp-button" class="btn">Pay</button>
+        <button type="submit" id="rzp-button" class="btn">Pay</button>
     </form>
     
    
 
     <script>
         var options = {
-            "key": "rzp_test_Uesjc1sbh2ZJv2", // Enter the Key ID generated from the Dashboard
+            "key": "{{ key_id }}", // Enter the Key ID generated from the Dashboard
             "amount": "{{ amount }}", // Amount is in paise
             "currency": "INR",
             "name": "Service Payment",
             "description": "Payment for your selected service",
             "order_id": "{{ order_id }}", // This is a Razorpay Order ID
-            "handler": function (response){
-                document.getElementById('payment-form').submit();
-            },
             "prefill": {
                 "name": "{{ name }}",
                 "email": "{{ email }}",
@@ -64,10 +61,13 @@
         };
 
         var rzp1 = new Razorpay(options);
-        document.getElementById('rzp-button').onclick = function(e){
-            rzp1.open();
-            e.preventDefault();
-        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            const amount = "{{amount}}";
+            if (parseFloat(amount)) {
+                rzp1.open();
+            }
+        });
     </script>
 </html>
 {% endblock %}

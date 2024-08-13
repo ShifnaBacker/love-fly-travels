@@ -1,9 +1,8 @@
 import requests
-import json
 from django.shortcuts import render, redirect
 from django.conf import settings
 from .forms import PaymentForm
-from .models import Service, Payment
+from .models import Payment
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 import razorpay
@@ -43,6 +42,7 @@ def create_payment_inr(request):
                 currency= currency,
                 payment_capture= '1'
             ))
+            print(order)
 
             payment = Payment.objects.create(
                 service=service,

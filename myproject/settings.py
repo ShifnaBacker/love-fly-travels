@@ -11,7 +11,6 @@ ALLOWED_HOSTS = ["103.235.106.106", "127.0.0.1", "localhost", "love-fly-travels.
 
 CSRF_TRUSTED_ORIGINS = [
     'https://love-fly-travels.onrender.com',
-    # Add other domains if needed
 ]
 
 INSTALLED_APPS = [
@@ -92,8 +91,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-RAZORPAY_KEY_ID = 'rzp_test_Uesjc1sbh2ZJv2'
-RAZORPAY_KEY_SECRET = 'OfX8ncMydlxoHc'
+RAZORPAY_KEY_ID = ''
+RAZORPAY_KEY_SECRET = ''
 RAZORPAY_WEBHOOK_SECRET = 'Afzal051@'
 
 TELR_STORE_ID = 'your_telr_store_id'
